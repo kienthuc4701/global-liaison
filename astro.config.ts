@@ -7,5 +7,6 @@ export default defineConfig({
   },
   experimental: {
     viewTransitions: true,
+    assets: true
   },
 });

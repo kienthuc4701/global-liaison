@@ -1,7 +1,16 @@
 ---
+import About from "@/components/About.astro";
+import Service from "@/components/Service.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 ---
-
 <BaseLayout>
-  <h2>My awesome blog subtitle</h2>
+   <!-- <About/> -->
+   <h2 text-center text-3xl font-bold mt-5>Services</h2>
+   <!-- Services -->
+   <div class="my-5 mx-auto md:max-w-300 md:grid md:grid-cols-2">
+      <Service service="SALON POS for Salon & Spa" description="This service available for ..."/>
+      <Service service="RESTAURANT POS" description="This service available for ..."/>
+      <Service service="RETAIL POS" description="This service available for ..."/>
+      <Service service="ENVIE SALON POS" description="This service available for ..."/>
+   </div>
 </BaseLayout>

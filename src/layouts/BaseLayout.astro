@@ -17,10 +17,9 @@ const { pageTitle = "Home Page" }: Record<string, any> = Astro.props;
     <title>{pageTitle}</title>
   </head>
   <body>
-    <Header />
-    <h1>{pageTitle}</h1>
-    <div class="bg-[#ddd]"><slot /></div>
-    <Footer />
+      <Header />
+      <slot />
+      <Footer />
     <script>
       import "@/scripts/menu.js";
     </script>
