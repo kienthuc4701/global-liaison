@@ -1,0 +1,25 @@
+{
+  "name": "dps",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/ts-plugin": "^1.1.1",
+    "@unocss/preset-attributify": "^0.55.1",
+    "@unocss/preset-uno": "^0.55.1",
+    "@unocss/preset-wind": "^0.55.1",
+    "astro": "^2.10.11"
+  },
+  "devDependencies": {
+    "@unocss/astro": "^0.55.1",
+    "@unocss/reset": "link:../../packages/reset",
+    "astro": "^2.10.11",
+    "unocss": "link:../../packages/unocss"
+  }
+}
