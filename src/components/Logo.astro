@@ -1,0 +1,14 @@
+---
+import logo from '@/assets/logo.png'
+import Image from 'astro/components/Image.astro';
+const localAlt="Logo"
+---
+<div absolute top-5 left-10>
+  <a href="/">
+    <Image
+    class="object-cover"
+    src={logo}
+    alt={localAlt} 
+    />
+  </a>
+ </div>
