@@ -1,32 +1,22 @@
 ---
-import { Image } from 'astro:assets'
-import banner from '@/assets/banner.jpg'
-import Button from "./Button.astro";
-import Hamburger from "./Hamburger.astro";
-import Navigation from "./Navigation.astro";
 import Logo from './Logo.astro';
-
-const localAlt = "The Banner";
+import Navigation from "./Navigation.astro";
+import ToggleNav from './ToggleNav';
 
 ---
 
-<header relative class="h-[100vh]" 
+
+<header relative class="h-[100vh] bg-header" 
 > 
-  <Image
-  class="h-full object-cover"
-  src={banner}
-  alt={localAlt} 
-/>
-  <div absolute w-full  text-white class="-translate-1/2 top-1/2 left-1/2 text-center">
-    <h1 text-5xl font-bold drop-shadow-md>Global Liasion</h1>
-    <p mt-6 mx-auto px-1 drop-shadow-md italic md:max-w-155>
-      <strong>Global Liaison</strong> We are a professional provider of POS systems and credit card terminals. With a dedicated Customer Support team available 24/7, we are highly evaluated for the quality of not only the product but the service also
-    </p>
-    <Button title="Our services" bgColor="#91C8E4"/>
-  </div>
-  <Logo/>
-  <nav absolute top-5 right-5>
-    <Hamburger />
-    <Navigation />
-  </nav>
+    <div absolute w-full flex items-center justify-between p-5 text-white>    
+      <Logo/>
+      <div flex items-center justify-between gap-x-2>
+        <a block px-3 py-1 font-medium rounded-full w-fit class=" bg-[#30A2FF] hover:bg-[#30A2FF] focus:bg-[#30A2FF]" href="/">
+          Contact
+        </a
+      >
+        <ToggleNav client:load/>
+        { <Navigation/>}
+      </div>
+    </div>
 </header>
