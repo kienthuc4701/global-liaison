@@ -1,13 +1,12 @@
 ---
 import Logo from './Logo.astro';
-import Navigation from "./Navigation.astro";
+import Navigation from "./Navigation";
 import ToggleNav from './ToggleNav';
 
 ---
 
 
-<header relative class="h-[100vh] bg-header" 
-> 
+<header relative class="min-h-[100vh] bg-header"> 
     <div absolute w-full flex items-center justify-between p-5 text-white>    
       <Logo/>
       <div flex items-center justify-between gap-x-2>
@@ -16,7 +15,18 @@ import ToggleNav from './ToggleNav';
         </a
       >
         <ToggleNav client:load/>
-        { <Navigation/>}
+        <Navigation client:load/>
       </div>
     </div>
+      <h1 absolute top-25 left-5 text-white text-30 font-bold leading-tight class="max-w-1/2">Transforming your vision into 
+        <div flex>
+          <svg 
+          width="150"
+          height="150"
+          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path style="fill:#125287" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"/></svg>
+          <span leading-30 class="text-[#125287]">          
+            reality. 
+          </span> 
+        </div>
+      </h1>
 </header>
