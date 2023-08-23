@@ -2,6 +2,7 @@
 import { isMenuOpen } from "@/store";
 
 const _isMenuOpen = isMenuOpen.get();
+console.log("nav");
 ---
 
 <div

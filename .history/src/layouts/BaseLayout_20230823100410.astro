@@ -2,8 +2,8 @@
 import "@unocss/reset/tailwind.css";
 import "virtual:uno.css";
 
+import Header from "@/components/Header";
 import Footer from "@/components/Footer.astro";
-import Header from "@/components/Header.astro";
 
 const { pageTitle = "Home Page" }: Record<string, any> = Astro.props;
 ---
@@ -20,11 +20,8 @@ const { pageTitle = "Home Page" }: Record<string, any> = Astro.props;
     <Header />
     <slot />
     <Footer />
-<<<<<<< HEAD
-=======
     <script>
       import "@/scripts/menu.js";
     </script>
->>>>>>> update-header
   </body>
 </html>
