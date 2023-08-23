@@ -1,6 +1,6 @@
 ---
 import About from "@/components/About.astro";
-import Service from "@/components/Service.astro";
+import Greeting from '@/components/Greeting.jsx';
 import BaseLayout from "@/layouts/BaseLayout.astro";
 ---
 <BaseLayout>
@@ -14,4 +14,5 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
       <Service service="RETAIL POS" description="This service available for ..."/>
       <Service service="ENVIE SALON POS" description="This service available for ..."/>
    </div> -->
+<Greeting client:visible  messages={["Hi", "Hello", "Howdy", "Hey there"]}/>
 </BaseLayout>

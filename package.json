@@ -10,11 +10,16 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/preact": "^2.2.2",
+    "@astrojs/rss": "^2.4.4",
     "@astrojs/ts-plugin": "^1.1.1",
+    "@nanostores/preact": "^0.5.0",
     "@unocss/preset-attributify": "^0.55.1",
     "@unocss/preset-uno": "^0.55.1",
     "@unocss/preset-wind": "^0.55.1",
-    "astro": "^2.10.11"
+    "astro": "^2.10.11",
+    "nanostores": "^0.9.3",
+    "preact": "^10.17.1"
   },
   "devDependencies": {
     "@unocss/astro": "^0.55.1",
