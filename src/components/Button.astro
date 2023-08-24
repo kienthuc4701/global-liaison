@@ -1,0 +1,8 @@
+---
+import {cn} from '@/ultis'
+const {title, className} = Astro.props
+---
+
+<button uppercase px-3 py-2 border-1  border-current class={cn("bg-white", className)}>
+   <a href="/services">{title}</a>
+</button> 
