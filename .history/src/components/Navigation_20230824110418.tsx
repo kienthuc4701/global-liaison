@@ -20,14 +20,13 @@ const Navigation = () => {
             Home
           </a>
           <a
-            class="
-              block
-              px-3
-              py-1
-              font-medium
-              rounded-full
-              w-fit hover:bg-bg-primary focus:bg-bg-primary"
-            href="/"
+            className="block
+    px-3
+    py-1
+    font-medium
+    rounded-full
+    w-fit hover:bg-[#30A2FF] focus:bg-[#30A2FF]"
+            href="/recruitment/"
           >
             Recruitment
           </a>
