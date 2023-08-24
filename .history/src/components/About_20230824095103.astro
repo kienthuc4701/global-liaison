@@ -1,0 +1,206 @@
+---
+import { Image } from "astro:assets";
+
+import Button from "@/components/Button.astro";
+import about from "@/assets/about.jpg";
+import about01 from "@/assets/about01.png";
+import about02 from "@/assets/about02.png";
+import about03 from "@/assets/about03.png";
+import about04 from "@/assets/about04.jpg";
+import about05 from "@/assets/about05.jpg";
+
+import service01 from "@/assets/service01.jpg";
+import service02 from "@/assets/service02.jpg";
+import service03 from "@/assets/service03.jpg";
+---
+
+<section>
+  <div class="grid grid-cols-2 gap-25">
+    <div class="px-5">
+      <Image
+        src={about}
+        alt="About"
+        class="-translate-y-10 rounded-xl shadow-xl"
+      />
+    </div>
+    <div class="mt-15 pr-5 text-end ml-auto">
+      <h2 text-16 font-semibold mb-2>Our Vision</h2>
+      <p mb-2>
+        Global Liaison was founded upon the belief of integrity and equal
+        opportunity. Our principles entail treating our merchants with courtesy
+        and respect, and also to ensure them reasonable pricing and reliability.
+        Our company serves primarily the business-to-business market. We offer
+        the most competitive rates with exceptional customer service.
+      </p>
+    </div>
+  </div>
+  <div m-5 grid grid-cols-3 gap-20>
+    <div shadow-xl p-5 rounded-md>
+      <Image src={about01} alt="About" class="w-50 h-50 rounded-xl mx-auto" />
+      <h4 text-2xl font-semibold mb-3 text-center>Sustainability</h4>
+      <p>
+        Because we are confident with our services, our merchants are never
+        obligated to any contracts. We also offer free terminals, supplies, and
+        in-house 24×7 technical support. We regularly ask our clients for
+        feedback to make sure they are satisfied with our services.
+      </p>
+    </div>
+    <div shadow-xl p-5 rounded-md>
+      <Image src={about02} alt="About" class="w-50 h-50 rounded-xl mx-auto" />
+      <h4 text-2xl font-semibold mb-3 text-center>Collaboration</h4>
+      <p>
+        We monitor merchants’ accounts closely to ensure their fees are correct
+        and their information are updated in a timely manner. We want to make
+        sure we are able to provide the most beneficial solution to our
+        merchants at any given point in time.
+      </p>
+    </div>
+    <div shadow-xl p-5 rounded-md>
+      <Image src={about03} alt="About" class="w-50 h-50 rounded-xl mx-auto" />
+      <h4 text-2xl font-semibold mb-3 text-center>Innovation</h4>
+      <p>
+        Beyond all the services we provide, integrity remains our core
+        principle. Our goal is to provide the best service with the utmost
+        honesty and transparency toward all of our clients. Our principles
+        entail treating our merchants with courtesy and respect, and also to
+        ensure them reasonable pricing and reliability
+      </p>
+    </div>
+  </div>
+  <div grid grid-cols-3 place-content-center gap-5 m-5>
+    <Image src={about04} alt="About 04" class="rounded-xl col-span-2" />
+    <Image src={about05} alt="About 05" class="rounded-xl h-full" />
+  </div>
+  <div px-5 py-10 class="bg-blue-light">
+    <!-- our team -->
+    <div grid grid-cols-3 gap-5>
+      <div>
+        <h2 text-16 font-semibold mb-2 text-white text-shadow>Our Team</h2>
+        <Button
+          title="See them"
+          className="shadow-md bg-primary rounded-full border-none text-white capitalize"
+        />
+      </div>
+      <div col-start-3>
+        <p py-10 text-white text-shadow>
+          We monitor merchants’ accounts closely to ensure their fees are
+          correct and their information are updated in a timely manner. We want
+          to make sure we are able to provide the most beneficial solution to
+          our merchants at any given point in time.
+        </p>
+      </div>
+    </div>
+    <!-- image -->
+    <div grid grid-cols-3 gap-5 x-5>
+      <div>
+        <h5 mb-4 font-semibold text-white>Communication</h5>
+        <p text-gray-light>
+          We monitor merchants’ accounts closely to ensure their fees are
+          correct and their information are updated in a timely manner. We want
+          to make sure we are able to provide the most beneficial solution to
+          our merchants at any given point in time.
+        </p>
+      </div>
+      <div>
+        <h5 mb-4 font-semibold text-white>Communication</h5>
+        <p text-gray-light>
+          We monitor merchants’ accounts closely to ensure their fees are
+          correct and their information are updated in a timely manner. We want
+          to make sure we are able to provide the most beneficial solution to
+          our merchants at any given point in time.
+        </p>
+      </div>
+      <div>
+        <h5 mb-4 font-semibold text-white>Communication</h5>
+        <p text-gray-light>
+          We monitor merchants’ accounts closely to ensure their fees are
+          correct and their information are updated in a timely manner. We want
+          to make sure we are able to provide the most beneficial solution to
+          our merchants at any given point in time.
+        </p>
+      </div>
+    </div>
+    <!-- our team -->
+    <div grid grid-cols-3 my-20 py-5 border-t-1>
+      <!-- <h3 font-semibold text-2xl text-white>HR team</h3> -->
+      <h3 font-semibold text-2xl text-white>Marketing team</h3>
+      <h3 font-semibold text-2xl text-white>Tech Support team</h3>
+      <h3 font-semibold text-2xl text-white>Non-tech team</h3>
+      <!-- our project -->
+    </div>
+    <!-- projects -->
+    <div>
+      <div grid grid-cols-3 gap-5>
+        <div>
+          <h2 text-16 font-semibold mb-2 text-white text-shadow>Our Service</h2>
+          <Button
+            title="See them"
+            className="shadow-md bg-primary rounded-full border-none text-white capitalize"
+          />
+        </div>
+        <div col-start-3>
+          <p py-10 text-white text-shadow>
+            We monitor merchants’ accounts closely to ensure their fees are
+            correct and their information are updated in a timely manner. We
+            want to make sure we are able to provide the most beneficial
+            solution to our merchants at any given point in time.
+          </p>
+        </div>
+      </div>
+      <div grid grid-cols-3 gap-5>
+        <div>
+          <span
+            inline-block
+            px-6
+            py-1
+            rounded-full
+            text-white
+            bg-gray-light
+            mb-5
+            relative
+            shadow-md
+            text-end
+            class="before:(absolute content-[''] w-3 h-3 rounded-full bg-blue-light top-1/2 left-1 -translate-y-1/2)"
+          >
+            Pantry
+          </span>
+          <Image src={service01} alt="About" class="rounded-xl h-120 shadow" />
+        </div>
+        <div>
+          <span
+            inline-block
+            px-4
+            py-1
+            rounded-full
+            text-white
+            bg-gray-light
+            mb-5
+            relative
+            shadow-md
+            class="before:(absolute content-[''] w-2 h-2 rounded-full bg-blue-light top-1/2 left-1 -translate-y-1/2)"
+          >
+            Gym
+          </span>
+          <Image src={service02} alt="About" class="rounded-xl h-120 shadow" />
+        </div>
+        <div>
+          <span
+            inline-block
+            px-4
+            py-1
+            rounded-full
+            text-white
+            bg-gray-light
+            mb-5
+            relative
+            shadow-md
+            class="before:(absolute content-[''] w-2 h-2 rounded-full bg-blue-light top-1/2 left-1 -translate-y-1/2)"
+          >
+            Gamming room
+          </span>
+          <Image src={service03} alt="About" class="rounded-xl h-120 shadow" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
