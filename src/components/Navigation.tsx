@@ -1,4 +1,4 @@
-import { useStore } from "@nanostores/preact";
+import { useStore } from "@nanostores/react";
 import { isMenuOpen } from "@/store";
 
 const Navigation = () => {
@@ -6,27 +6,29 @@ const Navigation = () => {
   return (
     <>
       {_isMenuOpen && (
-        <div className="absolute top-14  flex flex-col items-end">
+        <div className="absolute top-15 flex flex-col items-end">
           <a
-            class="
+            className="
               block
+              mb-2
               px-3
               py-1
               font-medium
               rounded-full
-              w-fit hover:bg-bg-primary focus:bg-bg-primary"
+              w-fit hover:bg-primary focus:bg-primary"
             href="/"
           >
             Home
           </a>
           <a
-            class="
+            className="
               block
               px-3
               py-1
+              mb-2
               font-medium
               rounded-full
-              w-fit hover:bg-bg-primary focus:bg-bg-primary"
+              w-fit hover:bg-primary focus:bg-primary"
             href="/"
           >
             Recruitment

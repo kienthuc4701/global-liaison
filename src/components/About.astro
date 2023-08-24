@@ -12,6 +12,7 @@ import about05 from "@/assets/about05.jpg";
 import service01 from "@/assets/service01.jpg";
 import service02 from "@/assets/service02.jpg";
 import service03 from "@/assets/service03.jpg";
+import RecruitmentSlider from "./RecruitmentSlider";
 ---
 
 <section>
@@ -71,7 +72,7 @@ import service03 from "@/assets/service03.jpg";
     <Image src={about04} alt="About 04" class="rounded-xl col-span-2" />
     <Image src={about05} alt="About 05" class="rounded-xl h-full" />
   </div>
-  <div px-5 py-10 class="bg-blue-light">
+  <div p-5 class="bg-blue-light">
     <!-- our team -->
     <div grid grid-cols-3 gap-5>
       <div>
@@ -121,6 +122,9 @@ import service03 from "@/assets/service03.jpg";
       </div>
     </div>
     <!-- our team -->
+    <div my-20 font-medium text-xl max-w-100 mx-auto text-white>
+      <p>Our interior design services focus on creaing spaces that are both functional and visually appealing. We work closely with our clients to understand their aesthetic preferences and design spaces that reflect their unique personalities and lifestyles. We ensure that every aspect of the space is carefully considered and thoughtfully considered and thoughtfully executed</p>
+    </div>
     <div grid grid-cols-3 my-20 py-5 border-t-1>
       <!-- <h3 font-semibold text-2xl text-white>HR team</h3> -->
       <h3 font-semibold text-2xl text-white>Marketing team</h3>
@@ -213,5 +217,20 @@ import service03 from "@/assets/service03.jpg";
         </div>
       </div>
     </div>
+    <!--  -->
   </div>
+  <div grid grid-cols-3 gap-20>
+   <div col-start-2 col-end-4>
+    <p text-lg font-semibold py-5 px-20 >With decades of experience, a talented team of architects and designers, and a commitment to excellence, we're ready to tackle your next project. Whether you're planning a commercial development, a residential renovation, or anything, we're here to guide you through every step of the process.
+      <a href="/contact" text-primary inline-flex items-center>
+        Contact us
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #30A2FF;transform: ;msFilter:;"><path d="M16 13h-6v-3l-5 4 5 4v-3h7a1 1 0 0 0 1-1V5h-2v8z"></path></svg>
+      </a> to learn more about how we can help urn your vision into reality
+    </p>
+    <!-- Recruitment -->
+    <div class="px-5">
+   <RecruitmentSlider client:visible/>
+    </div>
+  </div>
+</div>
 </section>
