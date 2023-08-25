@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/navigation';
 import 'swiper/css';
 import { cn } from '@/ultis';
+import Button from './Button.astro';
 
 const RecruitmentSlider = () => {
   return (
@@ -30,71 +31,24 @@ const RecruitmentSlider = () => {
     onSlideChange={()=>console.log('slide chnage')}
     onSwiper={(swiper)=>console.log(swiper)}
    >
-     <SwiperSlide className='h-full'>
-      <div className="px-5 py-5 flex flex-col flex gap-x-2 border-t border-r">
-        <span className='text-sm text-gray'>January 15, 2023</span>
-        <h5 className='font-semibold my-2 text-primary'>The Art of Minimlism in Architecture</h5>
-        <p className='text-xs pb-5'>Minilmosm is a design style that emerged in the 1960s as a reaction against the ormgate and ...</p>
-        <div className="h-1/5 mt-auto flex gap-x-2">
-          <div className="text-xs rounded-full bg-light-gray w-fit py-1 px-2.5 font-semibold cursor-pointer">Design</div>
-          <div className="text-xs rounded-full bg-light-gray w-fit py-1 px-2.5 font-semibold cursor-pointer">Aesthetics</div>
-        </div>
-      </div>
-     </SwiperSlide>
-     <SwiperSlide className='h-full'>
-      <div className="px-5 py-5 flex flex-col flex gap-x-2 border-t border-r">
-        <span className='text-sm text-gray'>January 15, 2023</span>
-        <h5 className='font-semibold my-2 text-primary'>The Art of Minimlism in Architecture</h5>
-        <p className='text-xs pb-5'>Minilmosm is a design style that emerged in the 1960s as a reaction against the ormgate and ...</p>
-        <div className="h-1/5 mt-auto flex gap-x-2">
-          <div className="text-xs rounded-full bg-light-gray w-fit py-1 px-2.5 font-semibold cursor-pointer">Design</div>
-          <div className="text-xs rounded-full bg-light-gray w-fit py-1 px-2.5 font-semibold cursor-pointer">Aesthetics</div>
-        </div>
-      </div>
-    </SwiperSlide>
     <SwiperSlide className='h-full'>
-      <div className="px-5 py-5 flex flex-col flex gap-x-2 border-t border-r">
-        <span className='text-sm text-gray'>January 15, 2023</span>
-        <h5 className='font-semibold my-2 text-primary'>The Art of Minimlism in Architecture</h5>
-        <p className='text-xs pb-5'>Minilmosm is a design style that emerged in the 1960s as a reaction against the ormgate and ...
+      <div className="px-5 py-5 flex flex-col gap-x-2 border-t border-r">
+       <div className="h-50 flex-shrink-0 overflow-hidden">
+       <span className='text-sm text-gray'>January 15, 2023</span>
+        <h5 className='font-semibold my-2 text-primary text-truncate-2'>
+          <a href='/'>
+          The Art of Minimlism in Architecture, The Art of Minimlism in Architecture, The Art of Minimlism in Architecture
+          </a>
+          </h5>
+        <p className='text-xs text-truncate-7'>Minilmosm is a design style that emerged in the 1960s as a reaction against the ormgate and ...,
+        Minilmosm is a design style that emerged in the 1960s as a reaction against the ormgate and ...,
+        Minilmosm is a design style that emerged in the 1960s as a reaction against the ormgate and ...,
+        Minilmosm is a design style that emerged in the 1960s as a reaction against the ormgate and ...
+        Minilmosm is a design style that emerged in the 1960s as a reaction against the ormgate and ...,
         Minilmosm is a design style that emerged in the 1960s as a reaction against the ormgate and ...
         </p>
-        <div className="h-1/5 flex-1 flex gap-x-2">
-          <div className="text-xs rounded-full bg-light-gray w-fit py-1 px-2.5 font-semibold cursor-pointer">Design</div>
-          <div className="text-xs rounded-full bg-light-gray w-fit py-1 px-2.5 font-semibold cursor-pointer">Aesthetics</div>
-        </div>
-      </div>
-     </SwiperSlide>
-     <SwiperSlide className='h-full'>
-      <div className="px-5 py-5 flex flex-col flex gap-x-2 border-t border-r">
-        <span className='text-sm text-gray'>January 15, 2023</span>
-        <h5 className='font-semibold my-2 text-primary'>The Art of Minimlism in Architecture</h5>
-        <p className='text-xs pb-5'>Minilmosm is a design style that emerged in the 1960s as a reaction against the ormgate and ...</p>
-        <div className="h-1/5 mt-auto flex gap-x-2">
-          <div className="text-xs rounded-full bg-light-gray w-fit py-1 px-2.5 font-semibold cursor-pointer">Design</div>
-          <div className="text-xs rounded-full bg-light-gray w-fit py-1 px-2.5 font-semibold cursor-pointer">Aesthetics</div>
-        </div>
-      </div>
-     </SwiperSlide>
-     <SwiperSlide className='h-full'>
-      <div className="px-5 py-5 flex flex-col flex gap-x-2 border-t border-r">
-        <span className='text-sm text-gray'>January 15, 2023</span>
-        <h5 className='font-semibold my-2 text-primary'>The Art of Minimlism in Architecture</h5>
-        <p className='text-xs pb-5'>Minilmosm is a design style that emerged in the 1960s as a reaction against the ormgate and ...</p>
-        <div className="h-1/5 mt-auto flex gap-x-2">
-          <div className="text-xs rounded-full bg-light-gray w-fit py-1 px-2.5 font-semibold cursor-pointer">Design</div>
-          <div className="text-xs rounded-full bg-light-gray w-fit py-1 px-2.5 font-semibold cursor-pointer">Aesthetics</div>
-        </div>
-      </div>
-    </SwiperSlide>
-    <SwiperSlide className='h-full'>
-      <div className="px-5 py-5 flex flex-col flex gap-x-2 border-t border-r">
-        <span className='text-sm text-gray'>January 15, 2023</span>
-        <h5 className='font-semibold my-2 text-primary'>The Art of Minimlism in Architecture</h5>
-        <p className='text-xs pb-5'>Minilmosm is a design style that emerged in the 1960s as a reaction against the ormgate and ...
-        Minilmosm is a design style that emerged in the 1960s as a reaction against the ormgate and ...
-        </p>
-        <div className="h-1/5 flex-1 flex gap-x-2">
+       </div>
+        <div className="mt-5 flex gap-x-2">
           <div className="text-xs rounded-full bg-light-gray w-fit py-1 px-2.5 font-semibold cursor-pointer">Design</div>
           <div className="text-xs rounded-full bg-light-gray w-fit py-1 px-2.5 font-semibold cursor-pointer">Aesthetics</div>
         </div>

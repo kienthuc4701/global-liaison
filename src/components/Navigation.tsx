@@ -6,7 +6,7 @@ const Navigation = () => {
   return (
     <>
       {_isMenuOpen && (
-        <div className="absolute top-15 flex flex-col items-end">
+        <div className="absolute top-15 flex flex-col items-end animated animated-fade-in-up">
           <a
             className="
               block
@@ -29,7 +29,7 @@ const Navigation = () => {
               font-medium
               rounded-full
               w-fit hover:bg-primary focus:bg-primary"
-            href="/"
+            href="/recruitment"
           >
             Recruitment
           </a>
