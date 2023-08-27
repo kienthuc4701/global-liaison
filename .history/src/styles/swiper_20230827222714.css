@@ -1,0 +1,5 @@
+@media (max-width: 767px) {
+  .swipper-wrapper {
+    flex-direction: column;
+  }
+}
