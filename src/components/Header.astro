@@ -4,16 +4,14 @@ import Navigation from "./Navigation";
 import ToggleNav from "./ToggleNav";
 ---
 
-<header relative class="min-h-[75vh] md:min-h-[100vh] bg-header">
+<header relative class="min-h-[75vh] md:min-h-[100vh] bg-header container">
   <div
-    absolute
-    w-full
+    pt-5
     flex
     items-center
     justify-between
-    p-5
     text-white
-    class="animated animated-slow animated-fade-in-down"
+    class="wrapper animated animated-slow animated-fade-in-down"
   >
     <Logo />
     <div flex items-center justify-between gap-x-2>
@@ -34,12 +32,10 @@ import ToggleNav from "./ToggleNav";
     </div>
   </div>
   <h1
-    absolute
-    top-40
-    left-5
     text-white
     text-12
-    md:text-30
+    mt-20
+    md:text-24
     font-bold
     leading-tight
     class="md:max-w-2/3 animated animated-fade-in-left animated-slow"
@@ -55,7 +51,7 @@ import ToggleNav from "./ToggleNav";
           d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
           data-name="Right"></path></svg
       >
-      <span leading-30 class="text-[#125287]"> reality.</span>
+      <span leading-30 class="text-[#125287]">reality.</span>
     </div>
   </h1>
 </header>

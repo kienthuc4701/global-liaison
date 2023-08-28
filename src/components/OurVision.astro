@@ -8,19 +8,17 @@ import about04 from "@/assets/about04.jpg";
 import about05 from "@/assets/about05.jpg";
 ---
 
-<div class="grid md:(grid-cols-2 gap-25)">
-  <div class="md:px-5">
+<div class="container grid md:(grid-cols-2 gap-25)">
     <Image
       src={about}
       alt="About"
       class="md:-mt-20 rounded-xl shadow-xl animated animated-slow animated-back-in-up"
     />
-  </div>
   <div
     class="mt-15 pr-5 text-end ml-auto animated animated-slow animated-back-in-right"
   >
     <h2 text-16 font-semibold mb-2>Our Vision</h2>
-    <p text-xl mb-2>
+    <p text-md mb-2>
       Global Liaison was founded upon the belief of integrity and equal
       opportunity. Our principles entail treating our merchants with courtesy
       and respect, and also to ensure them reasonable pricing and reliability.
@@ -29,17 +27,17 @@ import about05 from "@/assets/about05.jpg";
     </p>
   </div>
 </div>
+
 <div
-  m-5
   md:grid
   grid-cols-3
-  gap-20
-  class="animated animated-slower animated-slide-in-up"
+  gap-10
+  class="container mt-10 animated animated-slower animated-slide-in-up"
 >
   <div shadow-xl p-5 rounded-md>
     <Image src={about01} alt="About" class="w-50 h-50 rounded-xl mx-auto" />
     <h4 text-2xl font-semibold mb-3 text-center>Sustainability</h4>
-    <p text-xl>
+    <p text-md>
       Because we are confident with our services, our merchants are never
       obligated to any contracts. We also offer free terminals, supplies, and
       in-house 24×7 technical support. We regularly ask our clients for feedback
@@ -49,7 +47,7 @@ import about05 from "@/assets/about05.jpg";
   <div shadow-xl p-5 rounded-md>
     <Image src={about02} alt="About" class="w-50 h-50 rounded-xl mx-auto" />
     <h4 text-2xl font-semibold mb-3 text-center>Collaboration</h4>
-    <p text-xl>
+    <p text-md>
       We monitor merchants’ accounts closely to ensure their fees are correct
       and their information are updated in a timely manner. We want to make sure
       we are able to provide the most beneficial solution to our merchants at
@@ -59,7 +57,7 @@ import about05 from "@/assets/about05.jpg";
   <div shadow-xl p-5 rounded-md>
     <Image src={about03} alt="About" class="w-50 h-50 rounded-xl mx-auto" />
     <h4 text-2xl font-semibold mb-3 text-center>Innovation</h4>
-    <p text-xl>
+    <p text-md>
       Beyond all the services we provide, integrity remains our core principle.
       Our goal is to provide the best service with the utmost honesty and
       transparency toward all of our clients. Our principles entail treating our
@@ -68,7 +66,8 @@ import about05 from "@/assets/about05.jpg";
     </p>
   </div>
 </div>
-<div grid grid-cols-3 place-content-center gap-5 m-5>
+
+<div container grid grid-cols-3 place-content-center gap-10 my-10>   
   <Image
     src={about04}
     alt="About 04"

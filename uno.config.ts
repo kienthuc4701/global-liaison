@@ -31,7 +31,6 @@ export default defineConfig({
     { "text-primary": "text-[#30A2FF]", "bg-light-gray": "bg-[#eeeeee]" },
     { "swiper-wrapper": "flex-col" },
     [/^text-truncate-(.*)$/, ([, c]) => `line-clamp-${c} break-keep`],
-    [/^container-(.*)$/, ([, c]) => `max-w-${c} mx-auto`],
   ],
   transformers: [transformerDirectives(), transformerVariantGroup()],
   presets: [
@@ -54,6 +53,16 @@ export default defineConfig({
     },
   ],
   theme: {
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: '1rem',
+        sm: '2rem',
+        lg: '4rem',
+        xl: '5rem',
+        '2xl': '6rem',
+      },
+    },
     colors: {
       "blue-light": "#75C2F6",
       primary: "#30A2FF",
