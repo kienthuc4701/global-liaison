@@ -1,6 +1,12 @@
 ---
 import CommondHead from "@/components/CommondHead.astro";
+import fetchApi from "@/lib/strapi";
+import type Article from "@/interfaces/article";
 
+const articles = await fetchApi<Article[]>({
+  endpoint: "restaurants", // the content type to fetch
+  wrappedByKey: "data", // the key to unwrap the response
+});
 ---
 
-<CommondHead title="Recruitment Page"/>
+<CommondHead title="Recruitment Page" />
