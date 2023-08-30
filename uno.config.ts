@@ -28,7 +28,7 @@ export default defineConfig({
   ],
   shortcuts: [
     { "i-logo": "i-logos-astro w-6em h-6em transform transition-800" },
-    { "text-primary": "text-[#30A2FF]", "bg-light-gray": "bg-[#eeeeee]" },
+    { "text-primary": "text-[#30A2FF]"},
     { "swiper-wrapper": "flex-col" },
     [/^text-truncate-(.*)$/, ([, c]) => `line-clamp-${c} break-keep`],
   ],
@@ -67,7 +67,7 @@ export default defineConfig({
       "blue-light": "#75C2F6",
       primary: "#30A2FF",
       secondary: "#75C2F6",
-      "gray-light": "#rgba(246, 231, 231, 0.2)",
+      "gray-light": "rgba(246, 231, 231, 0.2)",
     },
   },
 });

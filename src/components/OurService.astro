@@ -7,7 +7,7 @@ import { Image } from "astro:assets";
 import Button from "./Button.astro";
 ---
 
-<div container bg-secondary>
+<div container bg-secondary py-20>
   <div md:grid grid-cols-3 gap-10>
     <div>
       <h2 text-16 font-semibold mb-2 text-white text-shadow>Our Service</h2>
@@ -16,7 +16,7 @@ import Button from "./Button.astro";
         className="shadow-md bg-primary rounded-full border-none text-white capitalize"
       />
     </div>
-    <p col-start-3 py-10 text-2xl text-white text-shadow>
+    <p col-start-3 py-10 text-md text-white text-shadow>
       We monitor merchants’ accounts closely to ensure their fees are correct
       and their information are updated in a timely manner. We want to make sure
       we are able to provide the most beneficial solution to our merchants at
@@ -30,16 +30,15 @@ import Button from "./Button.astro";
         py-1
         rounded-full
         text-white
-        bg-gray-light
         pl-6
         pr-4
         relative
         shadow-md
-        class="before:(absolute content-[''] w-3 h-3 rounded-full bg-primary top-1/2 left-2 shadow-md -translate-y-1/2)"
+        bg-gray-light
+        class=" before:(absolute content-[''] w-3 h-3 rounded-full bg-primary top-1/2 left-2 shadow-md -translate-y-1/2)"
         mb-5
         relative
         shadow-md
-        class="before:(absolute content-[''] w-2 h-2 rounded-full bg-blue-light top-1/2 left-1 -translate-y-1/2)"
       >
         Pantry
       </span>

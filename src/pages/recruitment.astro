@@ -1,12 +1,23 @@
 ---
 import CommondHead from "@/components/CommondHead.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 import fetchApi from "@/lib/strapi";
-import type Article from "@/interfaces/article";
 
-const articles = await fetchApi<Article[]>({
-  endpoint: "restaurants", // the content type to fetch
+const posts = await fetchApi<any>({
+  endpoint: "recruitment-posts?populate=*", // the content type to fetch
   wrappedByKey: "data", // the key to unwrap the response
 });
----
 
-<CommondHead title="Recruitment Page" />
+
+---
+<BaseLayout pageTitle="Recruitment">  
+  <Fragment>
+    {posts.map((post)=>
+    <a href={`/recruitments/${post.attributes.slug}`}>{post.attributes.title}</a>
+    )}
+</Fragment>
+</BaseLayout>
+
+<!-- <a href={}/> -->
+
+

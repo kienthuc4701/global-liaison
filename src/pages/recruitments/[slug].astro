@@ -1,10 +1,11 @@
 ---
-import fetchApi from "../../lib/strapi";
-import type Article from "../../interfaces/article";
+import fetchApi from "@/lib/strapi";
+import Markdown from '@astrojs/markdown-component';
+import BaseLayout from "@/layouts/BaseLayout.astro";
 
 export async function getStaticPaths() {
-  const articles = await fetchApi<Article[]>({
-    endpoint: "articles",
+  const articles = await fetchApi<any>({
+    endpoint: "recruitment-posts",
     wrappedByKey: "data",
   });
   return articles.map((article) => ({
@@ -12,30 +13,10 @@ export async function getStaticPaths() {
     props: article,
   }));
 }
-type Props = Article;
 const article = Astro.props;
 ---
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>{article.attributes.name}</title>
-  </head>
-
-  <body>
-    <main>
-      <!-- <img src={import.meta.env.STRAPI_URL + article.attributes.image.data.attributes.url} /> -->
-
-      <h1>{article.attributes.name}</h1>
-
-      <!-- Render plain text -->
-      <!-- <p>{article.attributes.content}</p> -->
-      <!-- Render markdown -->
-      <!-- <MyMardownComponent> -->
-      <!-- {article.attributes.content} -->
-      <!-- </MyMardownComponent> -->
-      <!-- Render html -->
-      <!-- <Fragment set:html={article.attributes.content} /> -->
-    </main>
-  </body>
-</html>
+<BaseLayout pageTitle={article.attributes.title}>
+  <Markdown>
+    {article.attributes.content}
+  </Markdown>
+</BaseLayout>
