@@ -1,22 +1,31 @@
 ---
+import { marked } from 'marked';
 import fetchApi from "@/lib/strapi";
-import Markdown from '@astrojs/markdown-component';
-import BaseLayout from "@/layouts/BaseLayout.astro";
+import BlogLayout from "@/layouts/BlogLayout.astro";
 
 export async function getStaticPaths() {
-  const articles = await fetchApi<any>({
-    endpoint: "recruitment-posts",
+  const posts = await fetchApi<any>({
+    endpoint: "recruitment-posts?populate=*",
     wrappedByKey: "data",
   });
-  return articles.map((article) => ({
-    params: { slug: article.attributes.slug },
-    props: article,
+
+
+  
+  return posts.map((post) => ({
+    params: { slug: post.attributes.slug },
+    props: post,
   }));
+  
 }
-const article = Astro.props;
+
+const post = Astro.props
+
+const {job} = post.attributes
+
+
+const content = marked.parse(post.attributes.content);
+
 ---
-<BaseLayout pageTitle={article.attributes.title}>
-  <Markdown>
-    {article.attributes.content}
-  </Markdown>
-</BaseLayout>
+<BlogLayout blogTitle={job.data.attributes.title}>
+  <article set:html={content}/>
+</BlogLayout>

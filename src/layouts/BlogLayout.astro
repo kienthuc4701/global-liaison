@@ -1,10 +1,9 @@
 ---
 import "virtual:uno.css";
-import Footer from "@/components/Footer.astro";
 import Header from "@/components/Header.astro";
 import CommondHead from "@/components/CommondHead.astro";
 
-const { pageTitle = "Home Page" }: Record<string, any> = Astro.props;
+const { pageTitle = "News | ", blogTitle }: Record<string, any> = Astro.props;
 ---
 
 <style is:global>
@@ -21,13 +20,13 @@ const { pageTitle = "Home Page" }: Record<string, any> = Astro.props;
   }
 </style>
 <html lang="en">
-  <CommondHead title={pageTitle} />
+  <CommondHead title={pageTitle + blogTitle} />
   <body>
-    <Header />
-    <slot />
-    <Footer />
+    <Header/>
+    <main container max-w-200 mx-auto mt-10 class="h-[100vh]"> 
+      <slot />
+    </div>
+    <!-- <Footer /> -->
   </body>
-  <script>
-    import "@/main.ts";
-  </script>
+
 </html>

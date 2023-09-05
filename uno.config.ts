@@ -7,7 +7,7 @@ import {
   transformerVariantGroup,
 } from "unocss";
 import presetRemToPx from "@unocss/preset-rem-to-px";
-import { animatedUno } from "animated-unocss";
+// import { animatedUno } from "animated-unocss";
 
 export default defineConfig({
   rules: [
@@ -43,7 +43,7 @@ export default defineConfig({
         "vertical-align": "middle",
       },
     }),
-    animatedUno(),
+    // animatedUno(),
   ],
   preflights: [
     {
