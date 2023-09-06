@@ -6,7 +6,7 @@ const Navigation = () => {
   return (
     <>
       {_isMenuOpen && (
-        <div className="absolute top-15 flex flex-col items-end animated animated-fade-in-up">
+        <div className="absolute top-12 flex flex-col items-end animated animated-fade-in-up text-shadow">
           <a
             className="
               block

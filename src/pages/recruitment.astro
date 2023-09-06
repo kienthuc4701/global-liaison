@@ -1,5 +1,6 @@
 ---
-import SmallHeaderLayout from "@/layouts/SmallHeaderLayout.astro";
+import Pagination from "@/components/Pagination";
+import BlogLayout from "@/layouts/BlogLayout.astro";
 import fetchApi from "@/lib/strapi";
 import { Image } from "astro:assets";
 
@@ -13,23 +14,16 @@ const posts = response.data;
 
 const meta = response.meta;
 ---
-<SmallHeaderLayout pageTitle="Recruitment">
+<BlogLayout pageTitle="Recruitment">
   <Fragment>
-    <h1 text-center font-bold text-2xl mb-5 text-primary uppercase>Recruitment</h1>
-    {posts.map((post)=>
-    <div flex flex-col>
-      <article mb-10>
-      <Image src={"http://localhost:1337"+post.attributes.images.data[0].attributes.url} alt="Hiring" class="shadow-md" width={post.attributes.images.data[0].attributes.width} height={post.attributes.images.data[0].attributes.height} format="webp"/> 
-      <p p-3 font-semibold text-primary><a href={`/recruitments/${post.attributes.slug}`}>{post.attributes.title}</a></p> 
-    </article>
+    <h1 text-center font-bold text-2xl mb-5 text-secondary uppercase>Recruitment</h1>
+    <div grid grid-cols-3 gap-5>
+      {posts.map((post)=>
+      <article flex flex-col mb-10 gap-3>
+        <Image src={"http://localhost:1337"+post.attributes.images.data[0].attributes.url} alt="Hiring" class="shadow-md max-h-78" width={post.attributes.images.data[0].attributes.width} height={post.attributes.images.data[0].attributes.height} format="webp"/> 
+        <p font-semibold animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent h-10 mt-auto><a href={`/recruitments/${post.attributes.slug}`}>{post.attributes.title}</a></p> 
+      </article>
+     )}
     </div>
-    <div>
-    {meta.pagination.pageSize.map((idx,item)=><>{idx+1}</>)}
-    </div>
-    )}
 </Fragment>
-</SmallHeaderLayout>
-
-<!-- <a href={}/> -->
-
-
+</BlogLayout>

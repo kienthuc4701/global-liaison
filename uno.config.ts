@@ -2,35 +2,30 @@ import {
   defineConfig,
   presetIcons,
   presetUno,
+  presetMini,
   presetAttributify,
   transformerDirectives,
   transformerVariantGroup,
 } from "unocss";
 import presetRemToPx from "@unocss/preset-rem-to-px";
-// import { animatedUno } from "animated-unocss";
 
 export default defineConfig({
   rules: [
-    // ['bg-primary', {"background-color":'#30A2FF'}],
-    // ['text-gray-light', {"color":'#DDE6ED'}],
-    // ['bg-gray-light', {"background-color":'rgba(246, 231, 231, 0.2)'}],
-    // ['service-shadow', {
-    //     "box-shadow":'0 15px 30px -10px rgba(0, 0, 0, 0.2)'}
-    // ,],
     [
       "bg-header",
       {
         background:
-          "radial-gradient(circle, hsla(206, 97%, 49%, 1) 0%, hsla(201, 87%, 76%, 1) 100%)",
+          "radial-gradient(circle, hsl(207, 46%, 37%) 0%, hsl(209, 57%, 10%) 100%)",
       },
     ],
-    // ['bg-blue-light', {"background-color":'#75C2F6'}],
   ],
   shortcuts: [
     { "i-logo": "i-logos-astro w-6em h-6em transform transition-800" },
     { "text-primary": "text-[#30A2FF]"},
     { "swiper-wrapper": "flex-col" },
     [/^text-truncate-(.*)$/, ([, c]) => `line-clamp-${c} break-keep`],
+    { "bg-body": "bg-slate-50" },
+
   ],
   transformers: [transformerDirectives(), transformerVariantGroup()],
   presets: [
@@ -43,7 +38,27 @@ export default defineConfig({
         "vertical-align": "middle",
       },
     }),
-    // animatedUno(),
+    presetMini({
+      theme: {
+        extend: {
+          animation: {
+            text: 'text 5s ease infinite',
+          },
+          keyframes: {
+            text: {
+              '0%, 100%': {
+                'background-size': '200% 200%',
+                'background-position': 'left center',
+              },
+              '50%': {
+                'background-size': '200% 200%',
+                'background-position': 'right center',
+              },
+            },
+          },
+        },
+      }
+    }),
   ],
   preflights: [
     {
@@ -56,18 +71,18 @@ export default defineConfig({
     container: {
       center: true,
       padding: {
-        DEFAULT: '1rem',
-        sm: '2rem',
-        lg: '4rem',
-        xl: '5rem',
-        '2xl': '6rem',
+        DEFAULT: '2rem',
+        sm: '4rem',
+        lg: '8rem',
+        xl: '10rem',
+        '2xl': '12rem',
       },
     },
     colors: {
       "blue-light": "#75C2F6",
-      primary: "#30A2FF",
-      secondary: "#75C2F6",
-      "gray-light": "rgba(246, 231, 231, 0.2)",
+      primary: "#0880e5",
+      secondary: "#0b1a28",
+      "gray-light": "#ACACAC"
     },
   },
 });

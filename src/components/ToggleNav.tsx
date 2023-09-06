@@ -10,7 +10,7 @@ const ToggleNav = () => {
 
   return (
     <button
-      className="rounded-full bg-gray-light p-2"
+      className="relative rounded-full bg-slate-500 p-2"
       onClick={handleToggle}
     >
       {_isMenuOpen ? (
@@ -37,5 +37,4 @@ const ToggleNav = () => {
     </button>
   );
 };
-
 export default ToggleNav;

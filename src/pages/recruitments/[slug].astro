@@ -1,7 +1,9 @@
 ---
 import { marked } from 'marked';
-import fetchApi from "@/lib/strapi";
 import BlogLayout from "@/layouts/BlogLayout.astro";
+import fetchApi from "@/lib/strapi";
+import { Image } from 'astro:assets';
+import { fade } from 'astro:transitions';
 
 export async function getStaticPaths() {
   const posts = await fetchApi<any>({
@@ -20,12 +22,19 @@ export async function getStaticPaths() {
 
 const post = Astro.props
 
-const {job} = post.attributes
+const {job, images ,title} = post.attributes
 
 
 const content = marked.parse(post.attributes.content);
 
+const url = "http://localhost:1337"+images.data[0].attributes.url;
+
 ---
 <BlogLayout blogTitle={job.data.attributes.title}>
+  <div mx-auto class="max-w-[600px]">
+  <Image src={url} alt="Hiring" width={700} height={50}/> 
+  <h2 text-2xl text-center my-5 font-medium>{title}</h2>
   <article set:html={content}/>
+  <button mt-10 border border-primary py-2 px-3 transition:animate={fade({ duration: '0.5s' })}>Apply now</button>
+  </div>
 </BlogLayout>

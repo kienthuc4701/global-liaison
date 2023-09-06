@@ -1,7 +1,9 @@
 ---
 import "virtual:uno.css";
 import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
 import CommondHead from "@/components/CommondHead.astro";
+import SmallHeader from "@/components/SmallHeader.astro";
 
 const { pageTitle = "News | ", blogTitle }: Record<string, any> = Astro.props;
 ---
@@ -12,7 +14,6 @@ const { pageTitle = "News | ", blogTitle }: Record<string, any> = Astro.props;
      Applies to all <h1> tags on your site. */
   body {
     font-family: "Poppins";
-    background-color: rgba(39, 183, 245, 0.125);
   }
   img {
     max-width: 100%;
@@ -21,12 +22,12 @@ const { pageTitle = "News | ", blogTitle }: Record<string, any> = Astro.props;
 </style>
 <html lang="en">
   <CommondHead title={pageTitle + blogTitle} />
-  <body>
-    <Header/>
-    <main container max-w-200 mx-auto mt-10 class="h-[100vh]"> 
+  <body bg-body>
+    <SmallHeader/>
+    <main container my-10> 
       <slot />
-    </div>
-    <!-- <Footer /> -->
+    </main>
+    <Footer />
   </body>
 
 </html>

@@ -5,9 +5,8 @@ import ToggleNav from "./ToggleNav";
 
 ---
 
-<header relative class="md:min-h-[80vh] bg-header container">
+<header class="relative py-5 bg-header container">
   <div
-    pt-5
     flex
     items-center
     justify-between
@@ -15,7 +14,7 @@ import ToggleNav from "./ToggleNav";
     class="wrapper animated animated-slow animated-fade-in-down"
   >
     <Logo />
-    <div flex items-center justify-between gap-x-2>
+    <div relative flex items-center justify-between gap-x-2>
       <a
         block
         px-3
@@ -32,7 +31,7 @@ import ToggleNav from "./ToggleNav";
       <Navigation client:load />
     </div>
   </div>
-  <h1
+  <!-- <h1
     text-white
     text-12
     mt-20
@@ -54,7 +53,7 @@ import ToggleNav from "./ToggleNav";
       >
       <span leading-30 class="text-[#125287]">reality.</span>
     </div>
-  </h1>
+  </h1> -->
 </header>
 <script>
   import "@/main.ts";

@@ -1,7 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/navigation";
 import "swiper/css";
-import { cn } from "@/ultis";
 
 const RecruitmentSlider = () => {
   return (
@@ -50,17 +49,17 @@ const RecruitmentSlider = () => {
         breakpoints={{
           640: { slidesPerView: 1 },
           768: { slidesPerView: 3 },
-          1536: { slidesPerView: 4 },
+          1536: { slidesPerView: 3 },
         }}
         spaceBetween={5}
         // slidesPerView={3}
         onSlideChange={() => console.log("slide chnage")}
         onSwiper={(swiper) => console.log(swiper)}
       >
-        <SwiperSlide className="">
-          <div className="px-5 py-5 flex flex-col gap-x-2 border-t border-r">
+        <SwiperSlide>
+          <div className="px-3 py-5 flex flex-col gap-x-2 border-t shadow">
             <div className="flex-shrink-0 overflow-hidden h-80">
-              <span className="text-sm text-gray">January 15, 2023</span>
+              <span className="text-sm text-gray-light">January 15, 2023</span>
               <h5 className="font-semibold my-2 text-xl text-primary text-truncate-2">
                 <a href="/">
                   The Art of Minimlism in Architecture, The Art of Minimlism in
@@ -81,52 +80,19 @@ const RecruitmentSlider = () => {
               </p>
             </div>
             <div className="mt-5 flex gap-x-2">
-              <div className="text-xs rounded-full bg-light-gray w-fit py-1 px-2.5 font-semibold cursor-pointer">
+              <div className="text-xs rounded-full bg-slate-200 w-fit py-1 px-2.5 font-semibold cursor-pointer">
                 Design
               </div>
-              <div className="text-xs rounded-full bg-light-gray w-fit py-1 px-2.5 font-semibold cursor-pointer">
-                Aesthetics
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="">
-          <div className="px-5 py-5 flex flex-col gap-x-2 border-t border-r">
-            <div className="flex-shrink-0 overflow-hidden h-80">
-              <span className="text-sm text-gray">January 15, 2023</span>
-              <h5 className="font-semibold my-2 text-xl text-primary text-truncate-2">
-                <a href="/">
-                  The Art of Minimlism in Architecture, The Art of Minimlism in
-                  Architecture, The Art of Minimlism in Architecture
-                </a>
-              </h5>
-              <p className="text-truncate-7">
-                Minilmosm is a design style that emerged in the 1960s as a
-                reaction against the ormgate and ..., Minilmosm is a design
-                style that emerged in the 1960s as a reaction against the
-                ormgate and ..., Minilmosm is a design style that emerged in the
-                1960s as a reaction against the ormgate and ..., Minilmosm is a
-                design style that emerged in the 1960s as a reaction against the
-                ormgate and ... Minilmosm is a design style that emerged in the
-                1960s as a reaction against the ormgate and ..., Minilmosm is a
-                design style that emerged in the 1960s as a reaction against the
-                ormgate and ...
-              </p>
-            </div>
-            <div className="mt-5 flex gap-x-2">
-              <div className="text-xs rounded-full bg-light-gray w-fit py-1 px-2.5 font-semibold cursor-pointer">
-                Design
-              </div>
-              <div className="text-xs rounded-full bg-light-gray w-fit py-1 px-2.5 font-semibold cursor-pointer">
+              <div className="text-xs rounded-full bg-slate-200 w-fit py-1 px-2.5 font-semibold cursor-pointer">
                 Aesthetics
               </div>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="px-5 py-5 flex flex-col gap-x-2 border-t border-r">
+          <div className="px-3 py-5 flex flex-col gap-x-2 border-t shadow">
             <div className="flex-shrink-0 overflow-hidden h-80">
-              <span className="text-sm text-gray">January 15, 2023</span>
+              <span className="text-sm text-gray-light">January 15, 2023</span>
               <h5 className="font-semibold my-2 text-xl text-primary text-truncate-2">
                 <a href="/">
                   The Art of Minimlism in Architecture, The Art of Minimlism in
@@ -147,19 +113,19 @@ const RecruitmentSlider = () => {
               </p>
             </div>
             <div className="mt-5 flex gap-x-2">
-              <div className="text-xs rounded-full bg-light-gray w-fit py-1 px-2.5 font-semibold cursor-pointer">
+              <div className="text-xs rounded-full bg-slate-200 w-fit py-1 px-2.5 font-semibold cursor-pointer">
                 Design
               </div>
-              <div className="text-xs rounded-full bg-light-gray w-fit py-1 px-2.5 font-semibold cursor-pointer">
+              <div className="text-xs rounded-full bg-slate-200 w-fit py-1 px-2.5 font-semibold cursor-pointer">
                 Aesthetics
               </div>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="px-5 py-5 flex flex-col gap-x-2 border-t border-r">
+          <div className="px-3 py-5 flex flex-col gap-x-2 border-t shadow">
             <div className="flex-shrink-0 overflow-hidden h-80">
-              <span className="text-sm text-gray">January 15, 2023</span>
+              <span className="text-sm text-gray-light">January 15, 2023</span>
               <h5 className="font-semibold my-2 text-xl text-primary text-truncate-2">
                 <a href="/">
                   The Art of Minimlism in Architecture, The Art of Minimlism in
@@ -180,10 +146,10 @@ const RecruitmentSlider = () => {
               </p>
             </div>
             <div className="mt-5 flex gap-x-2">
-              <div className="text-xs rounded-full bg-light-gray w-fit py-1 px-2.5 font-semibold cursor-pointer">
+              <div className="text-xs rounded-full bg-slate-200 w-fit py-1 px-2.5 font-semibold cursor-pointer">
                 Design
               </div>
-              <div className="text-xs rounded-full bg-light-gray w-fit py-1 px-2.5 font-semibold cursor-pointer">
+              <div className="text-xs rounded-full bg-slate-200 w-fit py-1 px-2.5 font-semibold cursor-pointer">
                 Aesthetics
               </div>
             </div>

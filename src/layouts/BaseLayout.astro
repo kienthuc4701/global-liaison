@@ -13,7 +13,6 @@ const { pageTitle = "Home Page" }: Record<string, any> = Astro.props;
      Applies to all <h1> tags on your site. */
   body {
     font-family: "Poppins";
-    background-color: rgba(39, 183, 245, 0.125);
   }
   img {
     max-width: 100%;
@@ -22,7 +21,7 @@ const { pageTitle = "Home Page" }: Record<string, any> = Astro.props;
 </style>
 <html lang="en">
   <CommondHead title={pageTitle} />
-  <body>
+  <body bg-body>
     <Header />
     <slot />
     <Footer />
