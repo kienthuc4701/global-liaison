@@ -16,14 +16,31 @@ const meta = response.meta;
 ---
 <BlogLayout pageTitle="Recruitment">
   <Fragment>
-    <h1 text-center font-bold text-2xl mb-5 text-secondary uppercase>Recruitment</h1>
-    <div grid grid-cols-3 gap-5>
-      {posts.map((post)=>
-      <article flex flex-col mb-10 gap-3>
-        <Image src={"http://localhost:1337"+post.attributes.images.data[0].attributes.url} alt="Hiring" class="shadow-md max-h-78" width={post.attributes.images.data[0].attributes.width} height={post.attributes.images.data[0].attributes.height} format="webp"/> 
-        <p font-semibold animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent h-10 mt-auto><a href={`/recruitments/${post.attributes.slug}`}>{post.attributes.title}</a></p> 
-      </article>
-     )}
+    <h1 text-center font-bold text-2xl mb-5 text-secondary uppercase>JOBS AND OPPORTUNITIES</h1>
+    <div grid grid-cols-4 gap-20>
+      <div grid grid-cols-2 gap-5 col-span-3>
+        {posts.map((post)=>
+          <article mb-10 gap-3 items-center>
+            <Image src={"http://localhost:1337"+post.attributes.images.data[0].attributes.url} alt="Hiring" class="shadow-md aspect-[4/3] rounded" width={post.attributes.images.data[0].attributes.width} height={post.attributes.images.data[0].attributes.height} format="webp"/> 
+            <h2 font-medium mt-2><a href="">{post.attributes.title}</a></h2>
+          </article>
+         )}
+          {posts.map((post)=>
+          <article mb-10 gap-3 items-center>
+            <Image src={"http://localhost:1337"+post.attributes.images.data[0].attributes.url} alt="Hiring" class="shadow-md aspect-[4/3] rounded" width={post.attributes.images.data[0].attributes.width} height={post.attributes.images.data[0].attributes.height} format="webp"/> 
+            <h2 font-medium mt-2><a href="">{post.attributes.title}</a></h2>
+          </article>
+         )}
+      </div>
+      <div>
+        <h3 mb-2 font-semibold>You may be interested</h3>
+        {posts.map((post)=>
+          <article mb-10 gap-3 items-center>
+            <Image src={"http://localhost:1337"+post.attributes.images.data[0].attributes.url} alt="Hiring" class="shadow-md aspect-[4/3] rounded" width={post.attributes.images.data[0].attributes.width} height={post.attributes.images.data[0].attributes.height} format="webp"/> 
+            <h2 font-medium mt-2><a href="">{post.attributes.title}</a></h2>
+          </article>
+         )}
+      </div>
     </div>
 </Fragment>
 </BlogLayout>

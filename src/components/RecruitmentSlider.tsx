@@ -59,7 +59,7 @@ const RecruitmentSlider = () => {
         <SwiperSlide>
           <div className="px-3 py-5 flex flex-col gap-x-2 border-t shadow">
             <div className="flex-shrink-0 overflow-hidden h-80">
-              <span className="text-sm text-gray-light">January 15, 2023</span>
+              <span className="text-sm text-slate-600">January 15, 2023</span>
               <h5 className="font-semibold my-2 text-xl text-primary text-truncate-2">
                 <a href="/">
                   The Art of Minimlism in Architecture, The Art of Minimlism in
@@ -92,7 +92,7 @@ const RecruitmentSlider = () => {
         <SwiperSlide>
           <div className="px-3 py-5 flex flex-col gap-x-2 border-t shadow">
             <div className="flex-shrink-0 overflow-hidden h-80">
-              <span className="text-sm text-gray-light">January 15, 2023</span>
+              <span className="text-sm text-slate-600">January 15, 2023</span>
               <h5 className="font-semibold my-2 text-xl text-primary text-truncate-2">
                 <a href="/">
                   The Art of Minimlism in Architecture, The Art of Minimlism in
@@ -125,7 +125,7 @@ const RecruitmentSlider = () => {
         <SwiperSlide>
           <div className="px-3 py-5 flex flex-col gap-x-2 border-t shadow">
             <div className="flex-shrink-0 overflow-hidden h-80">
-              <span className="text-sm text-gray-light">January 15, 2023</span>
+              <span className="text-sm text-slate-600">January 15, 2023</span>
               <h5 className="font-semibold my-2 text-xl text-primary text-truncate-2">
                 <a href="/">
                   The Art of Minimlism in Architecture, The Art of Minimlism in

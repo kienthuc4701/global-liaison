@@ -22,6 +22,7 @@ export default defineConfig({
   shortcuts: [
     { "i-logo": "i-logos-astro w-6em h-6em transform transition-800" },
     { "text-primary": "text-[#30A2FF]"},
+    { "text-description": "text-[#34648b]"},
     { "swiper-wrapper": "flex-col" },
     [/^text-truncate-(.*)$/, ([, c]) => `line-clamp-${c} break-keep`],
     { "bg-body": "bg-slate-50" },
