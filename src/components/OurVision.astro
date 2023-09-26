@@ -8,17 +8,20 @@ import about04 from "@/assets/about04.jpg";
 import about05 from "@/assets/about05.jpg";
 ---
 
-<div class="container grid md:(grid-cols-2 gap-25)">
-    <Image
-      src={about}
-      alt="About"
-      class="-translate-y-10 rounded-xl shadow-xl animated animated-slow animated-back-in-up"
-    />
-  <div
-    class="mt-15 pr-5 text-end ml-auto animated animated-slow animated-back-in-right"
+<div class="container mt-10 md:(max-w-full) relative">
+  <Image
+    src={about}
+    alt="About"
+    width={500}
+    height={1000}
+    class="md:(absolute -top-30) rounded-xl shadow-xl"
+  />
+  <div class="grid md:(grid-cols-2 gap-25)">
+   <div
+    class="col-start-2 mt-10"
   >
-    <h2 text-14 font-semibold mb-2>Our Vision</h2>
-    <p text-md mb-2>
+    <h2 text-14 font-semibold mb-2 text-right>Our Vision</h2>
+    <p text-md mb-2 text-center md:text-right>
       Global Liaison was founded upon the belief of integrity and equal
       opportunity. Our principles entail treating our merchants with courtesy
       and respect, and also to ensure them reasonable pricing and reliability.
@@ -27,12 +30,11 @@ import about05 from "@/assets/about05.jpg";
     </p>
   </div>
 </div>
-
 <div
   md:grid
   grid-cols-3
   gap-10
-  class="container mt-10 animated animated-slower animated-slide-in-up"
+  class="mt-10 animated animated-slower animated-slide-in-up"
 >
   <div>
     <Image src={about01} alt="About" class="w-50 h-50 rounded-xl mx-auto" />
@@ -66,7 +68,7 @@ import about05 from "@/assets/about05.jpg";
     </p>
   </div>
 </div>
-<div container grid grid-cols-3 place-content-center gap-10 my-10>   
+<div grid grid-cols-3 place-content-center gap-10 my-10>   
   <Image
     src={about04}
     alt="About 04"
@@ -77,4 +79,5 @@ import about05 from "@/assets/about05.jpg";
     alt="About 05"
     class="rounded-xl h-full animated animated-slower animated-fade-in-right-big"
   />
+</div>
 </div>

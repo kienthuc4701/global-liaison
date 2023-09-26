@@ -1,4 +1,4 @@
----
+<!-- ---
 import { marked } from 'marked';
 import BlogLayout from "@/layouts/BlogLayout.astro";
 import fetchApi from "@/lib/strapi";
@@ -11,14 +11,14 @@ export async function getStaticPaths() {
     wrappedByKey: "data",
   });
 
-
-  
   return posts.map((post) => ({
     params: { slug: post.attributes.slug },
     props: post,
   }));
   
 }
+console.log(Astro.params);
+
 
 const post = Astro.props
 
@@ -37,4 +37,4 @@ const url = "http://localhost:1337"+images.data[0].attributes.url;
     <article my-10 set:html={content}/>
     <button border border-primary py-2 px-3 transition:animate={fade({ duration: '0.5s' })}>Apply now</button>
     </div>
-</BlogLayout>
+</BlogLayout> -->

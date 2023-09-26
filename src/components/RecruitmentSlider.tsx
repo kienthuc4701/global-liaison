@@ -4,7 +4,7 @@ import "swiper/css";
 
 const RecruitmentSlider = () => {
   return (
-    <div className="relative translate-y-10 shadow-md rounded-xl bg-white">
+    <div className="relative shadow-md rounded-xl bg-white md:translate-y-20">
       {/* top */}
       <div className="flex justify-between py-5 px-4">
         <h4 className="font-semibold text-xl">Recent Articles</h4>

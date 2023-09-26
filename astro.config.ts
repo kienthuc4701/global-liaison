@@ -1,17 +1,20 @@
-import { defineConfig, squooshImageService  } from "astro/config";
-import unocss from "unocss/vite";
+import { defineConfig, squooshImageService } from "astro/config";
 import react from "@astrojs/react";
+import UnoCSS from 'unocss/astro';
+import vercel from "@astrojs/vercel/serverless";
 
 
 // https://astro.build/config
 export default defineConfig({
   image: {
-    service: squooshImageService(),
+    service: squooshImageService()
   },
-  vite: {
-    plugins: [unocss()]
-  },
-  integrations: [react({
+  integrations: [
+    UnoCSS(),
+    react({
+    include: ['**/react/*'],
     experimentalReactChildren: true
-  })]
+  })],
+  adapter: vercel(),
+  output: "server"
 });

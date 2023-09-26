@@ -7,9 +7,9 @@ import { Image } from "astro:assets";
 import Button from "./Button.astro";
 ---
 
-<div container bg-secondary py-20>
+<div container bg-secondary py-12 md:(max-w-full pt-60 )>
   <div md:grid grid-cols-3 gap-10>
-    <div>
+    <div flex flex-col items-start justify-center>
       <h2 text-14 font-semibold mb-2 text-white text-shadow>Our Service</h2>
       <Button
         title="See them"
@@ -23,67 +23,80 @@ import Button from "./Button.astro";
       any given point in time.
     </p>
   </div>
-  <div md:grid grid-cols-3 gap-10>
+  <div hidden md:(grid grid-cols-3 mt-20 mb-5)>
+    <div h-1 border-b-1 border-gray relative>
+      <div class="w-1.5 h-1.5 rounded-full bg-white absolute left-1/2 -translate-x-1/2 top-1/2"></div>
+    </div>
+    <div h-1 border-b-1 border-gray relative>
+      <div class="w-1.5 h-1.5 rounded-full bg-white absolute left-1/2 -translate-x-1/2 top-1/2"></div>
+    </div>
+    <div h-1 border-b-1 border-gray relative>
+      <div class="w-1.5 h-1.5 rounded-full bg-white absolute left-1/2 -translate-x-1/2 top-1/2"></div>
+    </div>
+ </div>
+  <div grid grid-cols-1 md:(gap-10 grid-cols-3 place-items-center) >
+    <span
+    py-1
+    rounded-full
+    max-w-fit
+    text-white
+    bg-slate-500 
+    pl-6
+    pr-4
+    relative
+    shadow-md
+    class="before:(absolute content-[''] w-3 h-3 rounded-full bg-gray-light top-1/2 left-2 shadow-md -translate-y-1/2)"
+    mb-5
+    relative
+    shadow-md
+  >
+    Gaming room
+  </span>
+  <span
+  py-1
+  max-w-fit
+  rounded-full
+  text-white
+  pl-6
+  pr-4
+  relative
+  shadow-md
+  bg-slate-500 
+  class=" before:(absolute content-[''] w-3 h-3 rounded-full bg-gray-light top-1/2 left-2 shadow-md -translate-y-1/2)"
+  mb-5
+  relative
+  shadow-md
+>
+  Pantry
+</span>
+<span
+max-w-fit
+py-1
+rounded-full
+text-white
+bg-slate-500 
+pl-6
+pr-4
+relative
+shadow-md
+class="before:(absolute content-[''] w-3 h-3 rounded-full bg-gray-light top-1/2 left-2 shadow-md -translate-y-1/2)"
+mb-5
+relative
+shadow-md
+class="before:(absolute content-[''] w-2 h-2 rounded-full bg-blue-light top-1/2 left-1 -translate-y-1/2)"
+>
+Gym
+</span>
+  </div>
+  <div grid md:grid-cols-3 gap-10>
     <div mt-5>
-      <span
-        inline-block
-        py-1
-        rounded-full
-        text-white
-        bg-slate-500 
-        pl-6
-        pr-4
-        relative
-        shadow-md
-        class="before:(absolute content-[''] w-3 h-3 rounded-full bg-gray-light top-1/2 left-2 shadow-md -translate-y-1/2)"
-        mb-5
-        relative
-        shadow-md
-      >
-        Gaming room
-      </span>
-      <Image src={service03} alt="About" class="rounded-xl h-120 shadow" />
+      <Image src={service02} alt="About" class="rounded-xl h-120 shadow" />
     </div>
     <div mt-5>
-      <span
-        inline-block
-        py-1
-        rounded-full
-        text-white
-        pl-6
-        pr-4
-        relative
-        shadow-md
-        bg-slate-500 
-        class=" before:(absolute content-[''] w-3 h-3 rounded-full bg-gray-light top-1/2 left-2 shadow-md -translate-y-1/2)"
-        mb-5
-        relative
-        shadow-md
-      >
-        Pantry
-      </span>
       <Image src={service01} alt="About" class="rounded-xl h-120 shadow" />
     </div>
     <div mt-5>
-      <span
-        inline-block
-        py-1
-        rounded-full
-        text-white
-        bg-slate-500 
-        pl-6
-        pr-4
-        relative
-        shadow-md
-        class="before:(absolute content-[''] w-3 h-3 rounded-full bg-gray-light top-1/2 left-2 shadow-md -translate-y-1/2)"
-        mb-5
-        relative
-        shadow-md
-        class="before:(absolute content-[''] w-2 h-2 rounded-full bg-blue-light top-1/2 left-1 -translate-y-1/2)"
-      >
-        Gym
-      </span>
-      <Image src={service02} alt="About" class="rounded-xl h-120 shadow" />
+      <Image src={service03} alt="About" class="rounded-xl h-120 shadow" />
     </div>
   </div>
 </div>

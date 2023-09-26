@@ -39,27 +39,7 @@ export default defineConfig({
         "vertical-align": "middle",
       },
     }),
-    presetMini({
-      theme: {
-        extend: {
-          animation: {
-            text: 'text 5s ease infinite',
-          },
-          keyframes: {
-            text: {
-              '0%, 100%': {
-                'background-size': '200% 200%',
-                'background-position': 'left center',
-              },
-              '50%': {
-                'background-size': '200% 200%',
-                'background-position': 'right center',
-              },
-            },
-          },
-        },
-      }
-    }),
+    presetMini(),
   ],
   preflights: [
     {
@@ -78,6 +58,7 @@ export default defineConfig({
         xl: '10rem',
         '2xl': '12rem',
       },
+      
     },
     colors: {
       "blue-light": "#75C2F6",

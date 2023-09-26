@@ -4,14 +4,13 @@ import Navigation from "./Navigation";
 import ToggleNav from "./ToggleNav";
 
 ---
-
-<header class="relative py-5 bg-header container">
+<header relative class="bg-header container md:(max-w-full)">
   <div
+    py-5
     flex
     items-center
     justify-between
     text-white
-    class="wrapper animated animated-slow animated-fade-in-down"
   >
     <Logo />
     <div relative flex items-center justify-between gap-x-2>
@@ -31,29 +30,32 @@ import ToggleNav from "./ToggleNav";
       <Navigation client:load />
     </div>
   </div>
-  <!-- <h1
-    text-white
-    text-12
-    mt-20
-    md:text-24
-    font-bold
-    leading-tight
-    class="md:max-w-2/3 animated animated-fade-in-left animated-slow"
-  >
-    Transforming your vision into
-    <div flex items-center>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 25 25"
-        class="w-30 h-30 md:(w-50 h:50)"
-        ><path
-          style="fill:#125287"
-          d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-          data-name="Right"></path></svg
+    <!-- <div
+      class="md:(max-w-2/3 mt-46) mt-20"
+    >
+      <h1
+      text-white
+      text-10
+      md:text-24
+      font-bold
+      leading-tight
       >
-      <span leading-30 class="text-[#125287]">reality.</span>
-    </div>
-  </h1> -->
+       Transforming your vision into
+      <span flex items-center>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 25 25"
+          class="w-30 h-30 md:(w-50 h:50)"
+          ><path
+            style="fill:#0880e5"
+            d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+            data-name="Right"></path></svg
+        >
+        <span leading-30 class="text-primary">reality.</span>
+      </span>
+      </h1>
+    <p text-white mt-10 text-lg>Ready to make your architectural vision a reality? Our team of experts is standing by to help bring your project to life.</p>
+  </div> -->
 </header>
 <script>
   import "@/main.ts";

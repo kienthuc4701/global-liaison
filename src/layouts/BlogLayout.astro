@@ -1,15 +1,11 @@
 ---
 import "virtual:uno.css";
 import Footer from "@/components/Footer.astro";
+import Header from "@/components/Header.astro";
 import CommondHead from "@/components/CommondHead.astro";
 import SmallHeader from "@/components/SmallHeader.astro";
-import { getImage } from "astro:assets";
-import bgBlog from '@/assets/bg-blog.png'
 
-
-const optimizedBackground = await getImage({src: bgBlog, format: 'avif'})
-
-const { pageTitle = "News | ", blogTitle }: Record<string, any> = Astro.props;
+const { pageTitle = "Home Page" }: Record<string, any> = Astro.props;
 ---
 
 <style is:global>
@@ -25,13 +21,13 @@ const { pageTitle = "News | ", blogTitle }: Record<string, any> = Astro.props;
   }
 </style>
 <html lang="en">
-  <CommondHead title={pageTitle + blogTitle} />
+  <CommondHead title={pageTitle} />
   <body bg-body>
-    <SmallHeader/>
-    <main container py-10> 
-      <slot />
-    </main>
+    <SmallHeader />
+    <slot />
     <Footer />
   </body>
-
+  <script>
+    import "@/main.ts";
+  </script>
 </html>

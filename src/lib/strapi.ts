@@ -7,10 +7,10 @@ interface Props {
 
 /**
  * Fetches data from the Strapi API
- * @param endpoint - The enpoint you are fetching.
- * @param query - The query parameters to add to the end of URL
- * @param wrappedByKey - The data key in the object that wraps your Response.
- * @param wrappedByList - A parameter to “unwrap” the list returned by Strapi, and return only the first item.
+ * @param endpoint - The endpoint to fetch from
+ * @param query - The query parameters to add to the url
+ * @param wrappedByKey - The key to unwrap the response from
+ * @param wrappedByList - If the response is a list, unwrap it
  * @returns
  */
 export default async function fetchApi<T>({
@@ -19,11 +19,13 @@ export default async function fetchApi<T>({
   wrappedByKey,
   wrappedByList,
 }: Props): Promise<T> {
-  if (endpoint.startsWith("/")) {
+  if (endpoint.startsWith('/')) {
     endpoint = endpoint.slice(1);
   }
 
   const url = new URL(`${import.meta.env.STRAPI_URL}/api/${endpoint}`);
+  console.log(url.toString());
+  
 
   if (query) {
     Object.entries(query).forEach(([key, value]) => {
